@@ -1,5 +1,7 @@
 # Análisis de Riesgo - Atlantic City
 
+[<- Volver al README](../README.md)
+
 | ID | RIESGO IDENTIFICADO | PLAN DE ACCIÓN PARA MITIGARLO | CRITICIDAD |
 |----|---------------------|-------------------------------|------------|
 |1|**Pérdida o corrupción** de datos durante la migración del sistema centralizado|Crear una estrategia de migración granulada para poder migrar la data de a pocos para poder ir verificando|Alto|

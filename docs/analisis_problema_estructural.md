@@ -1,5 +1,7 @@
 # Análisis del Problema Estructural
 
+[<- Volver al README](../README.md)
+
 ## RESUMEN
 
 Atlantic City enfrenta un problema estructural relacionado con la gestión de la información de sus clientes. La coexistencia de múltiples sistemas independientes ha generado una fragmentación de datos que impacta directamente en la eficiencia operativa, la calidad del servicio al cliente, la personalización de promociones y la capacidad de tomar decisiones estratégicas basadas en información confiable.

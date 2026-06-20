@@ -1,8 +1,10 @@
-## EFSRT: Proyecto Desarrollo de los Componentes de la Capa de Vista 
+## EFSRT: Proyecto Desarrollo de los Componentes de la Capa de Vista
 
-**Rúbrica:** Parcial 
+[<- Volver al README](../README.md)
 
-## **Indicadores de logro evaluados:**
+**Rúbrica:** Parcial
+
+## Indicadores de logro evaluados:
 
 - Comunica sus ideas por escrito de forma efectiva.
 - Se comunica asertiva y empáticamente con los demás integrantes de su equipo.
@@ -11,11 +13,11 @@
 - Identifica el problema de manera clara, estructurada y detallada, vinculándolo con las necesidades de los usuarios documentando los requerimientos funcionales y no funcionales, justificándolos con evidencia técnica relevante.
 - Diseña una arquitectura técnica completa con selección de tecnologías justificadas según su viabilidad y compatibilidad.
 
-## **Problema:**
+## Problema:
 
 Atlantic City enfrenta problemas con la unificación de datos de clientes, promociones desorganizadas y la falta de un sistema de información integral, lo que genera duplicidad de información y dificulta la toma de decisiones basadas en datos. Se requiere desarrollar un sistema moderno que centralice la información de los clientes, automatice la gestión de promociones y permita a la empresa operar de manera más eficiente. El objetivo es convertir a Atlantic City en una empresa data-driven mediante un sistema de gestión de clientes unificado y optimizado.
 
-## **Indicaciones:**
+## Indicaciones:
 
 - **Modalidad de trabajo:** Individual
 - **Entregable:** Informe escrito de las investigaciones realizadas.
@@ -40,7 +42,7 @@ Atlantic City enfrenta problemas con la unificación de datos de clientes, promo
 |Diseño integral de la arquitectura, componentes técnicos del sistema y selección de tecnologías|No evidencia o no alcanza lo mínimo establecido en el nivel “En proceso.|Presenta un diseño básico de la arquitectura que incluye solo algunos componentes principales, pero no detalla adecuadamente las interacciones o flujos entre ellos. La planificación es parcial, con tareas definidas de manera general y sin una estructura clara. Selecciona tecnologías, pero las justifica de forma superficial, limitándose a mencionar características genéricas o ventajas básicas sin profundizar en cómo estas tecnologías se alinean con los objetivos del sistema o en su impacto en aspectos clave como compatibilidad y rendimiento.|Presenta un diseño funcional de la arquitectura, que incluye una representación clara de los componentes principales del sistema y cómo estos interactúan para cumplir con los objetivos establecidos. Selecciona tecnologías pertinentes y las justifica de manera clara, pero con menor nivel de profundidad, omitiendo análisis detallados sobre aspectos técnicos avanzados como la integración con otros sistemas, la adaptabilidad en diferentes entornos, o el impacto en el mantenimiento del sistema.|Diseña una arquitectura técnica completa, respaldada por una planificación detallada que incluye cronogramas y asignación de tareas. Investiga y selecciona tecnologías adecuadas justificándolas con base en análisis crítico que considera rendimiento, compatibilidad, costos y ejemplos de casos exitosos. Refleja una comprensión integral del problema y sus necesidades técnicas.|
 ||1 punto|2 puntos|3 puntos|4 puntos|
 
-## **Fórmula** :
+## Fórmula:
 
 Puntaje en evaluación: Criterio 1 + Criterio 2 + Criterio 3 + Criterio 4 + Criterio 5 + Criterio 6
 

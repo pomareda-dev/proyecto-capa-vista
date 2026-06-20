@@ -1,5 +1,7 @@
 # Modernización del Sistema de Gestión de Clientes en Atlantic City
 
+[<- Volver al README](../README.md)
+
 ## Introducción
 
 Como jefe de desarrollo de sistemas en Atlantic City, me enfrento a un desafío crítico que está afectando directamente la operación diaria y la competitividad de nuestra empresa, líder en el sector del entretenimiento con 8 gerencias y más de 1,200 empleados distribuidos en diversas áreas clave. Aunque hemos experimentado un crecimiento significativo, nuestra infraestructura tecnológica no ha evolucionado al mismo ritmo, lo que ha generado una serie de problemas que comprometen nuestra eficiencia operativa.
