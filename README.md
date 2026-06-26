@@ -12,3 +12,4 @@
 
 6. [Propuesta de Desarrollo](docs/propuesta_desarrollo.md) — Arquitectura, tecnologías, requerimientos y plan de iteraciones
 7. [Distribución del Equipo](docs/distribucion_equipo.md) — Roles, tareas por iteración y convenciones de trabajo
+8. [Resumen de Propuestas y Elevator Speech](docs/resumen_propuestas_elevator_speech.md) — Síntesis ejecutiva y discurso directo al gerente
