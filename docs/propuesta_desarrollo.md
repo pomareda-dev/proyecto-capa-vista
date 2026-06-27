@@ -4,7 +4,7 @@
 
 ## 1. Resumen Ejecutivo
 
-Atlantic City enfrenta un problema estructural de fragmentación de información across sus 6 gerencias y más de 1,200 empleados. Los sistemas actuales operan de forma aislada, generando duplicidad de datos, procesos manuales redundantes y una incapacidad para tomar decisiones basadas en datos confiables. Esta propuesta define la arquitectura, tecnologías, requerimientos y plan de entregas para construir un **Sistema Integrado de Gestión de Clientes (CRM)** que centralice la información, automatice procesos y habilite una cultura *data-driven*.
+Atlantic City enfrenta un problema estructural de fragmentación de información en sus 6 gerencias y más de 1,200 empleados. Los sistemas actuales operan de forma aislada, generando duplicidad de datos, procesos manuales redundantes y una incapacidad para tomar decisiones basadas en datos confiables. Esta propuesta define la arquitectura, tecnologías, requerimientos y plan de entregas para construir un **Sistema Integrado de Gestión de Clientes (CRM)** que centralice la información, automatice procesos y habilite una cultura *data-driven*.
 
 El sistema se construirá con **Vue 3** (Composition API) para la capa de vista, **Node.js + Express** para la API, **MySQL** como motor de datos, y **Vitest + Jest** para pruebas unitarias, distribuyendo el trabajo entre un equipo de 4 desarrolladores (1 senior, 3 juniors) en 3 iteraciones.
 
@@ -29,7 +29,7 @@ La arquitectura de información de Atlantic City está fragmentada: múltiples s
 ### 2.3 Evidencia del problema
 
 - **Duplicidad de datos**: Un mismo cliente puede existir en diferentes sistemas con información inconsistente.
-- **Procesos manuales**: Los empleados invierten horas en buscar informaciónentre sistemas, corregir inconsistencias y consolidar reportes manualmente.
+- **Procesos manuales**: Los empleados invierten horas en buscar información entre sistemas, corregir inconsistencias y consolidar reportes manualmente.
 - **Atención inconsistente**: Los clientes experimentan respuestas diferentes según el canal o gerencia que los atiende.
 - **Reportes poco fiables**: La información recopilada manualmente desde diversas fuentes carece de actualización en tiempo real.
 
@@ -48,7 +48,7 @@ La arquitectura de información de Atlantic City está fragmentada: múltiples s
 | RF-05 | Reportes y dashboards | Visualizaciones en tiempo real: clientes más activos, promociones más exitosas, tiempos de atención. Filtros por variable clave. | Media | Gerencias (todas) |
 | RF-06 | Autenticación y roles | Sistema de login con roles por gerencia (Operaciones, Marketing, RRHH, Negocios, Servicio al Cliente, TI) y permisos diferenciados. | Alta | TI |
 | RF-07 | Automatización de procesos | Automatización de tareas repetitivas: notificaciones de promociones por segmento, escalamiento de quejas, actualización de estados. | Media | Operaciones, Servicio al Cliente |
-| RF-08 | Gestión de membresías | Registro y seguimiento del estado de membresía de cada cliente (activa, vencida,Upgrade). | Media | Operaciones, Marketing |
+| RF-08 | Gestión de membresías | Registro y seguimiento del estado de membresía de cada cliente (activa, vencida, upgrade). | Media | Operaciones, Marketing |
 
 ### 3.2 Requerimientos No Funcionales
 
@@ -77,7 +77,7 @@ La arquitectura de información de Atlantic City está fragmentada: múltiples s
 
 ### 4.1 Enfoque arquitectónico
 
-Se adopta una **arquitectura en capas** con separación de responsabilidades, priorizando la **capa de vista** (foco del proyecto) pero garantizando que cada capa sea independently testeable.
+Se adopta una **arquitectura en capas** con separación de responsabilidades, priorizando la **capa de vista** (foco del proyecto) pero garantizando que cada capa sea testeable de forma independiente.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -193,7 +193,7 @@ Usuario → [Vue Component] → [Pinia Store] → [API Service (axios)]
 | **Curva de aprendizaje** | Menor: template declarativo, reactividad integrada, convenciones claras | Mayor: JSX, hooks, decisiones de estado (useState vs useReducer) | **Vue** — Con 3 juniors, la curva de aprendizaje es crítica para la productividad |
 | **Estructura por convención** | Single-File Components (SFC) con template + script + style en un archivo | Libre: exige decisiones arquitectónicas (CSS modules, styled-components, etc.) | **Vue** — Las convenciones reducen la fricción de decisión |
 | **Ecosistema oficial** | Router oficial, Pinia (store oficial), Vue Test Utils | React Router (terceros), múltiples stores (Redux, Zustand, Jotai) | **Vue** — Menos fragmentación significa menos tiempo en decisiones |
-| **Tooling** | Vite (creado por el equipo de Vue), Vue DevTools | CRA esprecated, Vite también disponible | Empate — Ambos funcionan bien con Vite |
+| **Tooling** | Vite (creado por el equipo de Vue), Vue DevTools | CRA deprecado, Vite también disponible | Empate — Ambos funcionan bien con Vite |
 | **Mercado laboral** | Mayor demanda en el mercado global | Demanda significativamente mayor | React gana en mercado, pero Vue tiene presencia sólida en LATAM |
 | **Testing** | Vitest + Vue Test Utils + @vue/compiler-sfc | Jest + React Testing Library | Empate — Ambos tienen ecosistemas de testing maduros |
 | **Mantenibilidad a largo plazo** | Bueno con Composition API y TypeScript | Bueno con hooks y TypeScript | Empate — Ambos escalan bien con buenas prácticas |
@@ -312,7 +312,7 @@ Referencia cruzada con el [Análisis de Riesgo](analisis_de_riesgo.md) existente
 | RP-01 | Curva de aprendizaje de juniors en Vue 3/Prisma | Alta | Moderado | Pair programming las primeras 2 semanas; el Senior lidera la configuración inicial y crea ejemplos de referencia |
 | RP-02 | Scope creep por requerimientos no contemplados | Moderada | Alto | Definir alcance cerrado por iteración; cualquier cambio pasa por aprobación del equipo y se evalúa impacto |
 | RP-03 | Dependencia del Senior como cuello de botella | Moderada | Alto | Documentar decisiones arquitectónicas; Code Review express (máximo 24h); los juniors proponen soluciones antes de esperar instrucciones |
-| RP-04 | DatosSucios heredados afecten la calidad del sistema | Alta | Moderado | Implementar deduplicación en la creación de clientes; validación estricta en formularios |
+| RP-04 | Datos sucios heredados afecten la calidad del sistema | Alta | Moderado | Implementar deduplicación en la creación de clientes; validación estricta en formularios |
 | RP-05 | Infraestructura del casino incompatible | Baja | Alto | Evaluación previa de navegadores y red; diseño responsive y progresive enhancement |
 
 ---
@@ -333,10 +333,92 @@ Referencia cruzada con el [Análisis de Riesgo](analisis_de_riesgo.md) existente
 
 ---
 
-## 10. Referencias
+## 10. Plan de Desarrollo Personal y de Equipo
+
+Esta sección responde al criterio de **gestión autónoma del aprendizaje**: cada miembro del equipo se plantea metas viables, medibles y relevantes para el proyecto, con indicadores de logro claros, y se compromete a ejecutarlas, monitorear su avance y reflexionar críticamente para ajustar sus estrategias entre iteraciones.
+
+El plan se construye sobre la [Distribución del Equipo](distribucion_equipo.md), asignando a cada rol metas de aprendizaje alineadas con sus responsabilidades técnicas reales.
+
+### 10.1 Metas de aprendizaje por rol
+
+#### Tech Lead (Senior)
+
+| Meta | Indicador de logro | Plazo | Estrategia |
+|------|--------------------|-------|------------|
+| Consolidar patrones de arquitectura en capas aplicables al proyecto | Documento de decisiones arquitectónicas aprobado por el equipo | Semana 1 | Revisión del análisis FODA y de riesgo; documentación justificada (sección 4.4) |
+| Transferir conocimiento a los juniors sin volverse cuello de botella | Commits autónomos de juniors sin rework del Senior ≥ 80% | Fin de I2 | Pair programming las primeras 2 semanas; sesiones de dudas diarias de 15 min; code review express (≤ 24h) |
+| Asegurar la calidad técnica transversal del sistema | Cobertura de tests ≥ 70% por módulo y 0 errores de linting en `develop` | Fin de I3 | CI con gates de tests y linting; revisión de todos los PRs |
+| Diseñar e implementar pruebas E2E de flujos críticos | Suite E2E (login, crear cliente, crear ticket, asignar promoción) en verde | Semana 9 | Cypress o Playwright sobre el entorno de prueba |
+
+#### Junior 1 — Módulo de Clientes
+
+| Meta | Indicador de logro | Plazo | Estrategia |
+|------|--------------------|-------|------------|
+| Dominar Vue 3 Composition API en su módulo | Componentes Client (lista, detalle con tabs, formularios) implementados y aprobados en PR | Fin de I1 | Pair programming con el Senior en semana 1; seguir ejemplos de referencia del repositorio |
+| Implementar un CRUD completo cliente-servidor | Client Service + controller + frontend conectados y persistentes en MySQL | Fin de I1 | Replicar el patrón establecido en el módulo Auth por el Senior |
+| Aplicar validación y deduplicación de datos | Reglas de DNI/email duplicados funcionando en backend y frontend | Semana 3 | Consultar el esquema Prisma; coordinar con el responsable de segmentación |
+| Escribir tests unitarios de sus componentes y servicios | Cobertura ≥ 70% del módulo Clients | Fin de I1 | Vitest para frontend y Jest para backend; priorizar lógica de servicio |
+| Revisar código de pares para aprender arquitectura | ≥ 1 PR revisado por semana a otros juniors | Continuo | Aplicar la checklist de Definition of Done; registrar observaciones aprendidas |
+
+#### Junior 2 — Módulo de Promociones y Reportes
+
+| Meta | Indicador de logro | Plazo | Estrategia |
+|------|--------------------|-------|------------|
+| Implementar un CRUD de promociones con lógica de vigencia | Promotion Service con fechas de inicio/fin y estados operativo | Semana 4-5 | Extender el patrón CRUD aprendido en el módulo Client |
+| Diseñar asignación de promociones a segmentos con validación cruzada | Asignación que valida segmento existente y activo antes de persistar | Semana 6 | Coordinar con Junior 1 el modelo de Segment |
+| Generar reportes exportables (CSV/PDF) | Endpoint de exportación y botón en el frontend funcionando | Semana 8 | Investigar librerías en Node.js para generación de archivos; benchmark de rendimiento |
+| Escribir tests unitarios de Promotion Service y componentes | Cobertura ≥ 70% del módulo Promotions | Fin de I2 | Vitest para frontend y Jest para backend |
+| Participar en la revisión de PRs para mejorar lectura de código | ≥ 1 PR revisado por semana | Continuo | Aplicar la checklist de Definition of Done |
+
+#### Junior 3 — Módulo de Atención al Cliente y Dashboards
+
+| Meta | Indicador de logro | Plazo | Estrategia |
+|------|--------------------|-------|------------|
+| Implementar CRUD de tickets con comentarios y escalamiento | Ticket Service con reglas de escalamiento (monto, prioridad) operativo | Semana 5 | Estudiar las reglas de negocio definidas en el análisis de requerimientos (RF-04, RF-07) |
+| Construir un dashboard de KPIs interactivo | Dashboard con gráficos de actividad, efectividad y tiempos de respuesta renderizando datos en tiempo real | Semana 7 | Evaluar librería de gráficos (Chart.js u orden); consumir endpoints del Report Service |
+| Integrar Report Service con agregaciones para dashboards | Endpoints de agregación documentados y consumidos desde el frontend | Semana 7 | Coordinar con Junior 2 (reportes compartidos) |
+| Escribir tests unitarios de Ticket Service y componentes de dashboard | Cobertura ≥ 70% del módulo Tickets | Fin de I2 | Vitest para frontend y Jest para backend |
+| Participar en la revisión de PRs | ≥ 1 PR revisado por semana | Continuo | Aplicar la checklist de Definition of Done |
+
+### 10.2 Estrategias de auto-monitoreo
+
+| Práctica | Frecuencia | Evidencia |
+|----------|-----------|-----------|
+| **Bitácora semanal de aprendizaje** | Fin de cada semana | Cada desarrollador documenta en el repositorio de Notion/ SharePoint: qué aprendió, qué bloqueó, qué ajustará la próxima semana |
+| **Daily standup** | Diaria (15 min) | Bloqueos y avances comunicados al equipo; el Senior reasigna apoyo si un junior reporta la misma dificultad varios días |
+| **Code review como espacio formativo** | Continuo (≤ 24h de respuesta) | El Senior deja comentarios educativos, no solo correctivos; los juniors responden con propuesta de solución antes de aplicar |
+| **Sprint retrospective** | Fin de cada iteración | Reflexión grupal documentada; ajustes acordados para la siguiente iteración |
+
+### 10.3 Reflexión y ajuste entre iteraciones
+
+Al cierre de cada iteración, el equipo realiz un ejercicio estructurado de retroalimentación que produce tres artefactos:
+
+1. **What worked well** (qué funcionó): prácticas o estrategias de aprendizaje que aceleraron el desarrollo y se mantienen.
+2. **What to improve** (qué mejorar): dificultades técnicas o de proceso que recurriron durante la iteración y requieren ajuste.
+3. **Action items** (ajustes concretos): acciones específicas con responsable y plazo para la siguiente iteración. Ejemplo: si en I1 los juniors reportan dificultad con Pinia, en I2 el Senior programa una sesión corta de refuerzo.
+
+Los resultados se registran en la retrospectiva (superación 5.3 de la [Distribución del Equipo](distribucion_equipo.md)) y se ajustan las metas individuales de la iteración siguiente. Esto cierra el ciclo de **plan → ejecución → monitoreo → reflexión → ajuste** que define el criterio sobresaliente de gestión autónoma del aprendizaje.
+
+### 10.4 Indicadores de logro del equipo
+
+| Indicador | Objetivo | Fuente de verificación |
+|-----------|----------|------------------------|
+| Autonomía técnica de juniors | ≥ 80% de commits autónomos (sin rework obligatorio del Senior) | Historial de Git / PRs |
+| Cobertura de tests | ≥ 70% por módulo | Reporte de CI |
+| Tiempo de respuesta en PRs | ≤ 24 horas | Métricas de GitHub |
+| Defectos por iteración | < 5 por iteración | Sprint retrospective |
+| Adopción de Conventional Commits | 100% | Repositorio Git |
+| Completitud de módulos | ≥ 90% de funcionalidades planificadas por iteración | Sprint review |
+
+Estos indicadores coinciden con los criterios de éxito definidos en la [Distribución del Equipo](distribucion_equipo.md) y permiten al equipo evaluar de forma objetiva su progreso de aprendizaje, no solo el entregable técnico.
+
+---
+
+## 11. Referencias
 
 - [Problema de Atlantic City](problema_atlantic_city.md)
 - [Análisis del Problema Estructural](analisis_problema_estructural.md)
 - [FODA de Atlantic City](foda_atlantic_city.md)
 - [Análisis de Riesgo](analisis_de_riesgo.md)
 - [Rúbrica de Evaluación](rubrica_evaluacion_parcial_proyecto_capa_vista.md)
+- [Distribución del Equipo](distribucion_equipo.md)
