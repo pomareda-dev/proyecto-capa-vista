@@ -13,3 +13,9 @@
 6. [Propuesta de Desarrollo](docs/propuesta_desarrollo.md) — Arquitectura, tecnologías, requerimientos y plan de iteraciones
 7. [Distribución del Equipo](docs/distribucion_equipo.md) — Roles, tareas por iteración y convenciones de trabajo
 8. [Resumen de Propuestas y Elevator Speech](docs/resumen_propuestas_elevator_speech.md) — Síntesis ejecutiva y discurso directo al gerente
+
+## Guías por rol
+
+9. [Guía Junior 1 — Módulo de Clientes](docs/guia_junior1_clientes.md) — Tareas, temas a estudiar y criterios de aceptación
+10. [Guía Junior 2 — Módulo de Promociones y Reportes](docs/guia_junior2_promociones.md) — Tareas, temas a estudiar y criterios de aceptación
+11. [Guía Junior 3 — Módulo de Atención al Cliente y Dashboards](docs/guia_junior3_atencion_dashboards.md) — Tareas, temas a estudiar y criterios de aceptación
